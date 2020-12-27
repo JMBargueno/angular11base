@@ -9,6 +9,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { MaintenanceComponent } from './maintenance/maintenance.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,20 @@ import { MaintenanceComponent } from './maintenance/maintenance.component';
     NotFoundComponent,
     MaintenanceComponent
   ],
-  imports: [CommonModule, SharedRoutingModule, MatCardModule, MatButtonModule],
-  exports: [MatCardModule, NotFoundComponent]
+  imports: [
+    CommonModule,
+    SharedRoutingModule,
+    FlexLayoutModule,
+    MatCardModule,
+    MatButtonModule
+  ],
+  exports: [
+    FlexLayoutModule,
+    MatCardModule,
+    NavbarComponent,
+    FooterComponent,
+    NotFoundComponent,
+    MaintenanceComponent
+  ]
 })
 export class SharedModule {}
